@@ -8,6 +8,5 @@ void  main_loop()
         while(1)
         {
 		line = printing_prompt();
-		command_args = command_parsing(line);
         }
 }

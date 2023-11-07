@@ -14,9 +14,10 @@
 #include <sys/stat.h>
 #include <signal.h>
 
-
+/*simple shell functions prototypes*/
 char* printing_prompt();
 void main_loop();
+
 
 #define COMMAND_BUFSIZE 1024
 
