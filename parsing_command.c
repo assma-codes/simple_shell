@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
- *
+ * parsing_command - a function that split the command enterd by the user.
+ * @command_line: a string entered by the user.
+ * Return: array of stings.
  */
 
-char** parsing_command(char* command_line)
+char **parsing_command(char *command_line)
 {
         char *delimiter = " ";
 	char *command_line_copy = NULL, *token = NULL, **array_of_tokens;
@@ -17,7 +19,7 @@ char** parsing_command(char* command_line)
 		return NULL;
 	}
 	strcpy(command_line_copy, command_line);
-		token = strtok(command_line, delimiter);
+	token = strtok(command_line, delimiter);
 	while (token != NULL)
 	{
 		token_counter++;
@@ -41,9 +43,10 @@ char** parsing_command(char* command_line)
 	array_of_tokens[i] = NULL;
 	free(command_line_copy);
 	free(array_of_tokens);
-	return array_of_tokens;
+	return (array_of_tokens);
 }
 
+/*
 int main(int ac, char** argv)
 {
 	char *shell_prompt = "MASS$";
@@ -66,4 +69,5 @@ int main(int ac, char** argv)
 	}
         free(command_line);
 }
+*/
 

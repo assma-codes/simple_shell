@@ -1,6 +1,9 @@
 #include "main.h"
 
-void  main_loop()
+/**
+ * main_loop - the infinite loop of the program.
+ */
+void main_loop()
 {
 	char *line;
 	char **command_args;
@@ -8,5 +11,8 @@ void  main_loop()
         while(1)
         {
 		line = printing_prompt();
+		command_args = parsing_command(line); 
         }
+	free(line);
+	free(command_args);
 }

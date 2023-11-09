@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *
+ * printing_prompt - a function that prints a prompt.
+ * Return: A string.
  */
-
 char *printing_prompt()
 {
 	char *shell_prompt = "MASS$";

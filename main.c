@@ -1,12 +1,8 @@
 #include "main.h"
-
 /**
- * 
- *
- *
+ * main - program entry point
  */
-
-int main(int ac, char *argv)
+int main(void)
 {
 	main_loop();
 	return (0);
