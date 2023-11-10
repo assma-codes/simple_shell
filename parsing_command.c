@@ -1,12 +1,18 @@
 #include "main.h"
 
 /**
+<<<<<<< HEAD
  * parsing_command - function that tkenizes a string.
  * @command_line: the command entered by user to be tokenized.
  * Return: pointer to array of string after tokenizing.
+=======
+ * parsing_command - a function that split the command enterd by the user.
+ * @command_line: a string entered by the user.
+ * Return: array of stings.
+>>>>>>> 8b097b0f719d673bdadd38dffe5b49bb165014f3
  */
 
-char** parsing_command(char* command_line)
+char **parsing_command(char *command_line)
 {
 	char *delimiter = " ";
 	char *command_line_copy = NULL, *token = NULL, **array_of_tokens;
@@ -42,12 +48,21 @@ char** parsing_command(char* command_line)
 	}
 	array_of_tokens[i] = NULL;
 	free(command_line_copy);
+<<<<<<< HEAD
 	return array_of_tokens;
 	free(array_of_tokens);
 	//return array_of_tokens;
 }
 /*
 int main()
+=======
+	free(array_of_tokens);
+	return (array_of_tokens);
+}
+
+/*
+int main(int ac, char** argv)
+>>>>>>> 8b097b0f719d673bdadd38dffe5b49bb165014f3
 {
 	//char argv** =NULL;
 	char *shell_prompt = "MASS$";
@@ -69,5 +84,10 @@ int main()
 	char** argv = parsing_command(command_line);
 	}
         free(command_line);
+<<<<<<< HEAD
 }*/
+=======
+}
+*/
+>>>>>>> 8b097b0f719d673bdadd38dffe5b49bb165014f3
 

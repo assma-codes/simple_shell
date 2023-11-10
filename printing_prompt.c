@@ -1,10 +1,14 @@
 #include "main.h"
 
 /**
+<<<<<<< HEAD
  *printing_prompt - function that pnts the shell prompt.
  *Return: pointer to char which is the command has been red from user.
+=======
+ * printing_prompt - a function that prints a prompt.
+ * Return: A string.
+>>>>>>> 8b097b0f719d673bdadd38dffe5b49bb165014f3
  */
-
 char *printing_prompt()
 {
 	char *shell_prompt = "MASS$";
