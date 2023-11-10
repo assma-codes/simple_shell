@@ -16,9 +16,9 @@
 
 /* simple shell functions prototypes*/
 
-char* printing_prompt(void);
+char** printing_prompt();
 char** parsing_command(char* command_line);
-void main_loop(void);
+void main_loop(char** command_args);
 
 
 /* Macros */
