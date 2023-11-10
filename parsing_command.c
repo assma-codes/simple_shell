@@ -1,15 +1,9 @@
 #include "main.h"
 
 /**
-<<<<<<< HEAD
  * parsing_command - function that tkenizes a string.
  * @command_line: the command entered by user to be tokenized.
  * Return: pointer to array of string after tokenizing.
-=======
- * parsing_command - a function that split the command enterd by the user.
- * @command_line: a string entered by the user.
- * Return: array of stings.
->>>>>>> 8b097b0f719d673bdadd38dffe5b49bb165014f3
  */
 
 char **parsing_command(char *command_line)
