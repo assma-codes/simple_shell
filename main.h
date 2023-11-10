@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-
+/* used Standard Libraries */
 
 #include <stdio.h>
 #include <stdarg.h>
@@ -14,9 +14,11 @@
 #include <sys/stat.h>
 #include <signal.h>
 
-/*simple shell functions prototypes*/
-char* printing_prompt();
-void main_loop();
+/* functions prototypes*/
+
+char* printing_prompt(void);
+char** parsing_command(char* command_line);
+void main_loop(void);
 
 
 #define COMMAND_BUFSIZE 1024

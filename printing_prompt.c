@@ -1,18 +1,22 @@
 #include "main.h"
 
 /**
- *
+ *printing_prompt - function that pnts the shell prompt.
+ *Return: pointer to char which is the command has been red from user.
  */
 
 char *printing_prompt()
 {
 	char *shell_prompt = "MASS$";
-	char *command_line;
+	char *command_line = NULL;
 	size_t n_of_chars = 0;
-	
-	//write(1, &shell_prompt, strlen(shell_prompt));
+	ssize_t char_of_commandline;
+	char **command_args = NULL;
+
+	/*write(1, &shell_prompt, strlen(shell_prompt));*/
 	printf("%s", shell_prompt);
-	if(getline(&command_line, &n_of_chars, stdin) == -1)
+	char_of_commandline = getline(&command_line, &n_of_chars, stdin);
+	if (char_of_commandline == -1)
 	{
 		exit(EXIT_FAILURE);
 	}
@@ -20,7 +24,8 @@ char *printing_prompt()
 	{
 		exit(EXIT_SUCCESS);
 	}
-	printf("%s", command_line);
+	command_args = parsing_command(command_line);
+	//printf("%s", command_line);
 	free(command_line);
-	//return (command_line);
+	/*return (command_line);*/
 }
