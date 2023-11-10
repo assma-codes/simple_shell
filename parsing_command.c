@@ -48,21 +48,12 @@ char **parsing_command(char *command_line)
 	}
 	array_of_tokens[i] = NULL;
 	free(command_line_copy);
-<<<<<<< HEAD
 	return array_of_tokens;
 	free(array_of_tokens);
 	//return array_of_tokens;
 }
 /*
-int main()
-=======
-	free(array_of_tokens);
-	return (array_of_tokens);
-}
-
-/*
 int main(int ac, char** argv)
->>>>>>> 8b097b0f719d673bdadd38dffe5b49bb165014f3
 {
 	//char argv** =NULL;
 	char *shell_prompt = "MASS$";
@@ -84,10 +75,5 @@ int main(int ac, char** argv)
 	char** argv = parsing_command(command_line);
 	}
         free(command_line);
-<<<<<<< HEAD
 }*/
-=======
-}
-*/
->>>>>>> 8b097b0f719d673bdadd38dffe5b49bb165014f3
 
