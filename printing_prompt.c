@@ -4,7 +4,7 @@
  *printing_prompt - function that prints the shell prompt.
  *Return: pointer to char which is the command has been red from user.
  */
-char *printing_prompt()
+char** printing_prompt()
 {
 	char *shell_prompt = "MASS$";
 	char *command_line = NULL;
@@ -24,7 +24,9 @@ char *printing_prompt()
 		exit(EXIT_SUCCESS);
 	}
 	command_args = parsing_command(command_line);
+	printf("this is arg[0] : %s\n", command_args[0]);
 	//printf("%s", command_line);
 	free(command_line);
 	/*return (command_line);*/
+	return (command_args);
 }
