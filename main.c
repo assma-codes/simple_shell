@@ -11,6 +11,7 @@ int main(int ac, char **argv)
 {
 	(void)ac;
 	(void)argv;
-	main_loop(argv);
+
+	main_loop();
 	return (0);
 }
