@@ -5,12 +5,13 @@
  * Return: no return value
  */
 
-void  main_loop()
+void main_loop(void)
 {
 	while (1)
 	{
 		char *line = printing_prompt();
 		char **command_args = parsing_command(line);
+
 		executing_command(command_args);
 	}
 }

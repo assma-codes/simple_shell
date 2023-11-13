@@ -16,10 +16,10 @@
 
 /* simple shell functions prototypes*/
 
-char* printing_prompt();
-char** parsing_command(char* command_line);
+char *printing_prompt();
+char **parsing_command(char *command_line);
 void main_loop();
-char* abs_path(char* command);
+char *abs_path(char *command);
 void executing_command(char **argv);
 
 
