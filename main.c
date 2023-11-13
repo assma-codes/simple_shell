@@ -7,7 +7,7 @@
  * Return: 0 on success, -1 on failure.
  */
 
-int main(int ac, char** argv)
+int main(int ac, char **argv)
 {
 	(void)ac;
 	(void)argv;
