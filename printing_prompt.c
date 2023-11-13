@@ -10,8 +10,6 @@ char* printing_prompt(void)
 	char *command_line = NULL;
 	size_t n_of_chars = 0;
 	ssize_t char_of_commandline;
-	char **command_args = NULL;
-	char command[MAXIMUM_COMMAND];
 
 	/*write(1, &shell_prompt, strlen(shell_prompt));*/
 	printf("%s", shell_prompt);
