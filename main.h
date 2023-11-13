@@ -16,13 +16,15 @@
 
 /* simple shell functions prototypes*/
 
-char** printing_prompt();
+char* printing_prompt();
 char** parsing_command(char* command_line);
-void main_loop(char** command_args);
+void main_loop();
+char* abs_path(char* command);
+void executing_command(char **argv);
 
 
 /* Macros */
-#define COMMAND_BUFSIZE 1024
+#define MAXIMUM_COMMAND 1024
 
 
 #endif
