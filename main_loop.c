@@ -5,20 +5,14 @@
  * Return: no return value
  */
 
-void  main_loop(char** command_args)
+void  main_loop()
 {
-	//char *line;
 	int i;
-	//command_args = NULL;
 
 	while (1)
 	{
-		//line = printing_prompt();
-		char** line = printing_prompt();
-		for (i = 0; i < 3; i++)
-		{
-		printf("in the main loop tokens are:%s\n", line[i]);
-		}
+		char *line =printing_prompt();
+		char **command_args = parsing_command(line);
+		executing_command(command_args);
 	}
-		//command_args = parsing_command(line);
 }
