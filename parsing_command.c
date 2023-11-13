@@ -26,7 +26,7 @@ char **parsing_command(char *command_line)
 		token = strtok(NULL, delimiter);
 	}
 	token_counter++;
-	array_of_tokens = malloc(sizeof(char*) * token_counter);
+	array_of_tokens = malloc(sizeof(char *) * token_counter);
 	if (array_of_tokens == NULL)
 	{
 		perror("MASS: allocation failure for array");
@@ -37,12 +37,9 @@ char **parsing_command(char *command_line)
 	{
 		array_of_tokens[i] = malloc(sizeof(char) * (strlen(token) + 1));
 		strcpy(array_of_tokens[i], token);
-		/*printf("%s\n", array_of_tokens[i]);*/
 		token = strtok(NULL, delimiter);
 	}
 	array_of_tokens[i] = NULL;
 	free(command_line_copy);
-	return array_of_tokens;
+	return (array_of_tokens);
 }
-
-
