@@ -7,11 +7,9 @@
 
 void  main_loop()
 {
-	int i;
-
 	while (1)
 	{
-		char *line =printing_prompt();
+		char *line = printing_prompt();
 		char **command_args = parsing_command(line);
 		executing_command(command_args);
 	}
