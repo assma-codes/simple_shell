@@ -34,11 +34,11 @@ void executing_command(char **argv)
 		}
 		else
 		{
-			printf("Command not found: %s\n", complete_command);
+			_putchar('Command not found');
 		}
 	}
 	else
 	{
-		printf("Invalid command\n");
+		_putchar('Invalid command\n');
 	}
 }
