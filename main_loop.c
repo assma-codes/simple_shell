@@ -7,11 +7,15 @@
 
 void main_loop(void)
 {
+	char *line;
+	char **command_args;
+
 	while (1)
 	{
-		char *line = printing_prompt();
-		char **command_args = parsing_command(line);
-
+		line = printing_prompt();
+		command_args = parsing_command(line);
 		executing_command(command_args);
+		free(line);
+		free(command_args);
 	}
 }
