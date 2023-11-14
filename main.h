@@ -22,6 +22,7 @@ void main_loop();
 char *abs_path(char *command);
 void executing_command(char **argv);
 int _putchar(char c);
+void handle_exit(void);
 
 /* Macros */
 #define MAXIMUM_COMMAND 1024
