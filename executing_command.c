@@ -10,36 +10,36 @@ void executing_command(char **argv)
 {
 	pid_t child_proccess;
 	char *logout = "exit";
+	int status;
 
 	if (argv && argv[0])
 	{
 		char *complete_command = argv[0];
-		char *excat_command = abs_path(complete_command);
+		char *exact_command = abs_path(complete_command);
 
 		if (strcmp(complete_command, logout) == 0)
 		{
 			handle_exit();
 		}
-		if (excat_command != NULL)
+		if (exact_command != NULL && strchr(exact_command, '/') != NULL)
 		{
 			child_proccess = fork();
 			if (child_proccess == 0)
 			{
-				if (execve(excat_command, argv, environ) == -1)
+				if (execve(exact_command, argv, environ) == -1)
 				{
 					perror("Error executing command");
 				}
 			}
 			else if (child_proccess > 0)
 			{
-				int status;
-
 				wait(&status);
 			}
 		}
 		else
 		{
-			print_f("Command not found");
+			print_f(argv[0]);
+			print_f(" : not found\n");
 		}
 	}
 	else
