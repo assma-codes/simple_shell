@@ -14,6 +14,10 @@
 #include <sys/stat.h>
 #include <signal.h>
 
+/* Global Variables */
+extern char **environ;
+
+
 /* simple shell functions prototypes*/
 
 char *printing_prompt();
@@ -21,7 +25,7 @@ char **parsing_command(char *command_line);
 void main_loop();
 char *abs_path(char *command);
 void executing_command(char **argv);
-int _putchar(char c);
+void print_f(const char *str);
 void handle_exit(void);
 
 /* Macros */

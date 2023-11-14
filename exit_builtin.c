@@ -7,7 +7,6 @@
 
 void handle_exit(void)
 {
-	_putchar('Exiting Shell');
-	_putchar('\n');
+	print_f("Exiting Shell....\n");
 	exit(0);
 }
