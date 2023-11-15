@@ -2,6 +2,7 @@
 
 /**
  *printing_prompt - function that prints the shell prompt.
+ *@input: A variable of file type.
  *Return: pointer to char which is the command has been red from user.
  */
 char *printing_prompt(FILE *input)
