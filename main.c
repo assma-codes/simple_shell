@@ -3,6 +3,7 @@
 /**
  * main - the main function which represents the entry poit to the program.
  * @ac: number of arguments.
+ * @av: array of strings which represents command with arguments.
  * Return: 0 on success, -1 on failure.
  */
 
