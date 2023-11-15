@@ -30,10 +30,9 @@ char *abs_path(char *command)
 			{
 				free(full_path_copy);
 				return (file_path);
-				free(file_path);
 			}
 			else
-			free(file_path);
+				free(file_path);
 			path_token = strtok(NULL, ":");
 		}
 	}

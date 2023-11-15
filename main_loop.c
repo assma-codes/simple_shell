@@ -5,7 +5,7 @@
  * Return: no return value
  */
 
-void main_loop(void)
+void main_loop(FILE *input)
 {
 	char *line;
 	char **command_args;
@@ -13,7 +13,7 @@ void main_loop(void)
 
 	while (1)
 	{
-		line = printing_prompt();
+		line = printing_prompt(input);
 		command_args = parsing_command(line);
 		executing_command(command_args);
 		free(line);

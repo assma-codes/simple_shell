@@ -9,7 +9,7 @@
 void executing_command(char **argv)
 {
 	pid_t child_process;
-	char *logout = "exit", *exact_command;
+	char *logout = "exit", *exact_command, *enviroment = "env";
 	int status;
 
 	if (argv && argv[0])
@@ -18,10 +18,9 @@ void executing_command(char **argv)
 
 		exact_command = abs_path(complete_command);
 		if (_strcmp(complete_command, logout) == 0)
-		{
-			free(complete_command);
 			handle_exit();
-		}
+		if (_strcmp(complete_command, enviroment) == 0)
+			handle_env();
 		if (exact_command != NULL)
 		{
 			if (_strchr(exact_command, '/') == NULL)
@@ -44,7 +43,6 @@ void executing_command(char **argv)
 			print_f(argv[0]);
 			print_f(" : not found\ni");
 		}
-		free(exact_command);
 	}
 	else
 	{

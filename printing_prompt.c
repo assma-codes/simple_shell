@@ -4,7 +4,7 @@
  *printing_prompt - function that prints the shell prompt.
  *Return: pointer to char which is the command has been red from user.
  */
-char *printing_prompt(void)
+char *printing_prompt(FILE *input)
 {
 	char *shell_prompt = "MASS $ ";
 	char *command_line = NULL;
@@ -12,7 +12,7 @@ char *printing_prompt(void)
 	ssize_t char_of_commandline;
 
 	write(STDOUT_FILENO, shell_prompt, strlen(shell_prompt));
-	char_of_commandline = getline(&command_line, &n_of_chars, stdin);
+	char_of_commandline = getline(&command_line, &n_of_chars, input);
 	if (char_of_commandline == -1)
 	{
 		free(command_line);

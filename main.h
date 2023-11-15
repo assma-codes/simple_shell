@@ -20,9 +20,9 @@ extern char **environ;
 
 /* simple shell functions prototypes*/
 
-char *printing_prompt();
+char *printing_prompt(FILE *input);
 char **parsing_command(char *command_line);
-void main_loop(void);
+void main_loop(FILE *input);
 char *abs_path(char *command);
 void executing_command(char **argv);
 void print_f(const char *str);
@@ -32,6 +32,7 @@ char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 char *_strchr(char *s, char c);
+void handle_env(void);
 
 /* Macros */
 #define MAXIMUM_COMMAND 1024
