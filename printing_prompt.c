@@ -15,6 +15,7 @@ char *printing_prompt(void)
 	char_of_commandline = getline(&command_line, &n_of_chars, stdin);
 	if (char_of_commandline == -1)
 	{
+		free(command_line);
 		print_f("\n");
 		exit(EXIT_FAILURE);
 	}
