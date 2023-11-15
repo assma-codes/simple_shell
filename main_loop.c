@@ -2,6 +2,7 @@
 
 /**
  * main_loop - the function which runs the shell forever until it is exited.
+ * @input: A variable of file type.
  * Return: no return value
  */
 
