@@ -22,7 +22,7 @@ extern char **environ;
 
 char *printing_prompt();
 char **parsing_command(char *command_line);
-void main_loop();
+void main_loop(void);
 char *abs_path(char *command);
 void executing_command(char **argv);
 void print_f(const char *str);

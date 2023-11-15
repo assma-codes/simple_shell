@@ -36,7 +36,7 @@ void executing_command(char **argv)
 				wait(&status);
 			}
 		}
-		else
+		else if (strcmp(excat_command, "exit") == 0)
 		{
 			print_f(argv[0]);
 			print_f(" : not found\n");
