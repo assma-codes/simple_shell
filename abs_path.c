@@ -20,7 +20,7 @@ char *abs_path(char *command)
 		path_token = strtok(full_path_copy, ":");
 		while (path_token != NULL)
 		{
-			directory_length = strlen(path_token);
+			directory_length = _strlen(path_token);
 			file_path = malloc(command_length + directory_length + 2);
 			_strcpy(file_path, path_token);
 			_strcat(file_path, "/");
