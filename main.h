@@ -27,6 +27,11 @@ char *abs_path(char *command);
 void executing_command(char **argv);
 void print_f(const char *str);
 void handle_exit(void);
+int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
+char *_strcat(char *dest, char *src);
+int _strcmp(char *s1, char *s2);
+char *_strchr(char *s, char c);
 
 /* Macros */
 #define MAXIMUM_COMMAND 1024

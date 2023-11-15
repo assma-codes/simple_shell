@@ -12,7 +12,7 @@ char *abs_path(char *command)
 	struct stat buf;
 	char command_length, directory_length;
 
-	command_length = strlen(command);
+	command_length = _strlen(command);
 	full_path = getenv("PATH");
 	if (full_path)
 	{
@@ -22,10 +22,10 @@ char *abs_path(char *command)
 		{
 			directory_length = strlen(path_token);
 			file_path = malloc(command_length + directory_length + 2);
-			strcpy(file_path, path_token);
-			strcat(file_path, "/");
-			strcat(file_path, command);
-			strcat(file_path, "\0");
+			_strcpy(file_path, path_token);
+			_strcat(file_path, "/");
+			_strcat(file_path, command);
+			_strcat(file_path, "\0");
 			if (stat(file_path, &buf) == 0)
 			{
 				return (file_path);

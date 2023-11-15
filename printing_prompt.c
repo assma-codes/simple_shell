@@ -18,7 +18,7 @@ char *printing_prompt(void)
 		print_f("\n");
 		exit(EXIT_FAILURE);
 	}
-	n_of_chars = strlen(command_line);
+	n_of_chars = _strlen(command_line);
 	if (n_of_chars > 0 && command_line[n_of_chars - 1] == '\n')
 	{
 		command_line[n_of_chars - 1] = '\0';

@@ -12,13 +12,13 @@ char **parsing_command(char *command_line)
 	char *command_line_copy = NULL, *token = NULL, **array_of_tokens;
 	int token_counter = 0, i;
 
-	command_line_copy = malloc(sizeof(char) * (strlen(command_line) + 1));
+	command_line_copy = malloc(sizeof(char) * (_strlen(command_line) + 1));
 	if (command_line_copy == NULL)
 	{
 		perror("MASS: allocation failure of copy");
 		return (NULL);
 	}
-	strcpy(command_line_copy, command_line);
+	_strcpy(command_line_copy, command_line);
 	token = strtok(command_line, delimiter);
 	while (token != NULL)
 	{
@@ -36,7 +36,7 @@ char **parsing_command(char *command_line)
 	for (i = 0; token != NULL; i++)
 	{
 		array_of_tokens[i] = malloc(sizeof(char) * (strlen(token) + 1));
-		strcpy(array_of_tokens[i], token);
+		_strcpy(array_of_tokens[i], token);
 		token = strtok(NULL, delimiter);
 	}
 	array_of_tokens[i] = NULL;

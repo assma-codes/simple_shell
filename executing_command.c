@@ -17,11 +17,11 @@ void executing_command(char **argv)
 		char *complete_command = argv[0];
 		char *exact_command = abs_path(complete_command);
 
-		if (strcmp(complete_command, logout) == 0)
+		if (_strcmp(complete_command, logout) == 0)
 		{
 			handle_exit();
 		}
-		if (exact_command != NULL && strchr(exact_command, '/') != NULL)
+		if (exact_command != NULL && _strchr(exact_command, '/') != NULL)
 		{
 			child_proccess = fork();
 			if (child_proccess == 0)
