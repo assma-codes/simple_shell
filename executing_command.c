@@ -9,7 +9,7 @@
 void executing_command(char **argv)
 {
 	pid_t child_proccess;
-
+	
 	if(argv && argv[0])
 	{
 		char *complete_command = argv[0];
@@ -30,12 +30,15 @@ void executing_command(char **argv)
 			wait(&status);
 		}
 		}
-		else
+		else if (strcmp(excat_command, "exit") == 0)
 		{
-			printf("Command not found: %s\n", complete_command);
+			handle_exit();
+			exit_flag = 1;
+			/*printf("Command not found: %s\n", complete_command);*/
+		
 		}
 	}
-		else
+		else 
 		{
 			printf("Invalid command\n");
 		}
