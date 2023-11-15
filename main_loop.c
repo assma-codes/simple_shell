@@ -9,6 +9,7 @@ void main_loop(void)
 {
 	char *line;
 	char **command_args;
+	int i;
 
 	while (1)
 	{
@@ -16,6 +17,10 @@ void main_loop(void)
 		command_args = parsing_command(line);
 		executing_command(command_args);
 		free(line);
+		for (i = 0; command_args[i] != NULL; i++)
+		{
+			free(command_args[i]);
+		}
 		free(command_args);
 	}
 }

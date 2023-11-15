@@ -28,6 +28,7 @@ char *abs_path(char *command)
 			_strcat(file_path, "\0");
 			if (stat(file_path, &buf) == 0)
 			{
+				free(full_path_copy);
 				return (file_path);
 				free(file_path);
 			}
