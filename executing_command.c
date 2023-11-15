@@ -22,15 +22,15 @@ void executing_command(char **argv)
 			free(complete_command);
 			handle_exit();
 		}
-		if (exact_command != NULL && _strchr(exact_command, '/') != NULL)
+		if (exact_command != NULL)
 		{
+			if (_strchr(exact_command, '/') == NULL)
+				print_f("Command Not Found");
 			child_process = fork();
 			if (child_process == 0)
 			{
 				if (execve(exact_command, argv, environ) == -1)
-				{
 					perror("Error executing command");
-				}
 			}
 			else if (child_process > 0)
 			{
