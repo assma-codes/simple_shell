@@ -40,8 +40,6 @@ void executing_command(char **argv)
 		}
 		else
 		{
-			free(complete_command);
-			free(exact_command);
 			print_f(argv[0]);
 			print_f(" : not found\n");
 		}
