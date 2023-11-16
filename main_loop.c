@@ -10,25 +10,18 @@ void main_loop(FILE *input)
 {
 	char *line;
 	char **command_args;
-	int i, interactive_mode = isatty(STDIN_FILENO);
+	int i;
 
-	do
+	while (1)
 	{
 		line = printing_prompt(input);
 		command_args = parsing_command(line);
-		if (command_args != NULL && command_args[0] != NULL)
+		executing_command(command_args);
+		free(line);
+		for (i = 0; command_args[i] != NULL; i++)
 		{
-			executing_command(command_args);
-			free(line);
-			for (i = 0; command_args[i] != NULL; i++)
-			{
-				free(command_args[i]);
-			}
-			free(command_args);
+			free(command_args[i]);
 		}
-		else if (!interactive_mode)
-		{
-			break;
-		}
-	} while (interactive_mode);
+		free(command_args);
+	}
 }
