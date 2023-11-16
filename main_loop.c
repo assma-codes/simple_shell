@@ -24,4 +24,6 @@ void main_loop(FILE *input)
 		}
 		free(command_args);
 	}
+	free(line);
+	free(command_args);
 }

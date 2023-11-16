@@ -15,6 +15,7 @@ char **parsing_command(char *command_line)
 	command_line_copy = malloc(sizeof(char) * (_strlen(command_line) + 1));
 	if (command_line_copy == NULL)
 	{
+		free(command_line_copy);
 		perror("MASS: allocation failure of copy");
 		return (NULL);
 	}
@@ -29,6 +30,7 @@ char **parsing_command(char *command_line)
 	array_of_tokens = malloc(sizeof(char *) * token_counter);
 	if (array_of_tokens == NULL)
 	{
+		free(array_of_tokens);
 		perror("MASS: allocation failure for array");
 		return (NULL);
 	}
